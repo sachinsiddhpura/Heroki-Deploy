@@ -1,0 +1,23 @@
+install heroku
+heroku login
+git clone your repository
+cd your project
+heroku create
+git push heroku master
+heroku ps:scale web=1
+heroku logs --tail
+web: gunicorn yourproject.wsgi --log-file -
+python manage.py runserver 0.0.0.0:5000
+heroku ps
+heroku ps:scale web=0
+heroku ps:scale web=1
+pip install -r requirements.txt
+python manage.py collectstatic
+heroku local web -f Procfile.windows (for windows) otherwise heroku local web
+git add .
+heroku addons:create papertrail
+heroku addons
+heroku config
+heroku pg
+heroku run python manage.py migrate
+heroku open
