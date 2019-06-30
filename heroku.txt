@@ -21,3 +21,8 @@ heroku config
 heroku pg
 heroku run python manage.py migrate
 heroku open
+
+
+For updating git remote
+git remote rm heroku
+heroku git:remote -a newname
