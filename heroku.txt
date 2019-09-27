@@ -26,3 +26,9 @@ heroku open
 For updating git remote
 git remote rm heroku
 heroku git:remote -a newname
+
+
+#For static website
+mv index.html home.html
+echo '<?php include_once("home.html"); ?>' > index.php
+echo '{}' > composer.json
